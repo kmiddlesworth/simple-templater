@@ -12,13 +12,6 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   limit: '50mb'
 })); 
 
-app.get('/zip', (req, res) => {
-	res.sendFile(process.env.PWD + '/files.zip');
-})
-
-app.get('/', (req, res) => res.sendFile(process.env.PWD + '/app.html'));
-app.post('/', (req, res) => {
-
 // authenticate
 if (process.env.PASSWORD && process.env.USERNAME) {
 	authObj = {};
@@ -30,12 +23,21 @@ if (process.env.PASSWORD && process.env.USERNAME) {
 }
 
 
+app.get('/zip', (req, res) => {
+	res.sendFile(process.env.PWD + '/files.zip');
+})
+
+app.get('/', (req, res) => res.sendFile(process.env.PWD + '/app.html'));
+app.post('/', (req, res) => {
+
 	try {
 
 		del(['files/*', '*.zip']).then(paths => {
 
 			let fileTemplate = req.body.file;
 			let htmlTemplate = req.body.html;
+
+			console.log(JSON.parse(req.body.data));
 
 			JSON.parse(req.body.data).forEach((item) => {
 
