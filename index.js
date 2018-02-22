@@ -31,6 +31,12 @@ app.get('/zip', (req, res) => {
 app.get('/', (req, res) => res.sendFile(__dirname + '/app.html'));
 app.post('/', (req, res) => {
 
+	var dir = './tmp';
+
+	if (!fs.existsSync(__dirname + '/files/')){
+	    fs.mkdirSync(__dirname + '/files/');
+	}
+
 	try {
 
 		del(['files/*', '*.zip']).then(paths => {
