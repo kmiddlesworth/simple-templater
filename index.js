@@ -50,7 +50,7 @@ app.post('/', (req, res) => {
 					body = keyReplace(key, item[key], body);
 				}
 
-				fs.writeFileSync('files/' + file, body);
+				fs.writeFileSync(__dirname + '/files/' + file, body);
 
 			});
 
