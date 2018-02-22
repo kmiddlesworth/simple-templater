@@ -25,10 +25,10 @@ if (process.env.PASSWORD && process.env.USERNAME) {
 
 
 app.get('/zip', (req, res) => {
-	res.sendFile(process.env.PWD + '/files.zip');
+	res.sendFile(__dirname + '/files.zip');
 })
 
-app.get('/', (req, res) => res.sendFile(process.env.PWD + '/app.html'));
+app.get('/', (req, res) => res.sendFile(__dirname + '/app.html'));
 app.post('/', (req, res) => {
 
 	try {
@@ -67,7 +67,7 @@ app.post('/', (req, res) => {
 
 	} catch(e){
 		console.log('error');
-		res.sendFile(process.env.PWD + '/app.html');
+		res.sendFile(__dirname + '/app.html');
 	}
 
 });
