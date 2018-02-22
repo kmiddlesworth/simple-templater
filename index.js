@@ -4,6 +4,7 @@ const del = require('del');
 const fs = require('fs');
 const shell = require('shelljs');
 const app = express();
+const basicAuth = require('express-basic-auth');
 
 
 app.use(bodyParser.json({limit: '50mb'}));       // to support JSON-encoded bodies
