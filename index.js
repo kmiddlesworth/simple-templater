@@ -54,7 +54,7 @@ app.post('/', (req, res) => {
 
 			});
 
-			shell.exec('zip -r files.zip files', function(code, stdout, stderr) {
+			shell.exec('zip -r files.zip ' + __dirname + '/files', function(code, stdout, stderr) {
 				res.redirect('/zip');
 			});
 			
