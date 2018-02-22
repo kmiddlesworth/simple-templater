@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Template Amazement Machine!</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/codemirror.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/theme/material.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/codemirror.min.js"></script>
+	
+	<style>
+		
+		body {
+			margin:2em;
+			font-family: system-ui;
+		}
+
+		input {
+			display:block;
+			border:none;
+			background:#263238;
+			border:#263238 1px solid;
+			color:rgba(233, 237, 237, 1);
+			max-width:400px;
+			cursor:pointer;
+			font-size: 1.2em;
+			padding:.5em 1em;
+			width: 100%;
+		}
+
+		button {	
+			display:block;
+			margin:2em auto;
+			border:none;
+			background:#263238;
+			border:#263238 1px solid;
+			color:rgba(233, 237, 237, 1);
+			max-width:400px;
+			cursor:pointer;
+			animation:pulse 5s infinite;
+			font-size: 2em;
+			padding:1em 2em;
+			z-index:1000;
+			border-radius:10px;
+		}
+		button:hover {
+			
+		}
+		
+		@keyframes pulse {
+		  	0%, 100% {
+		    	opacity:1;
+		  	}
+			
+			45% {
+				transform: rotate(0deg);
+			}
+
+			46% {
+				transform: rotate(-4deg);
+			}
+
+			48% {
+				transform: rotate(4deg);
+			}
+
+		  	50% {
+		    	opacity:.8;
+		    	transform: rotate(0deg)
+		  	}
+		}
+	</style>
+
+</head>
+<body>
+	
+	<h1>The Les Amazement Machine!</h1>
+	
+		<form action="/" method="post">
+
+		<h2>Put your json here:</h2>
+		<textarea id="data" name="data" required>
+			
+		</textarea>
+		<h2>Put your html template here:</h2>
+		<p><small>Note: placeholder example: {{key}} or {{filename}}</small></p>
+		<textarea id="html" name="html" required>
+			
+		</textarea>
+
+		<h2>Keys for file name generation:</h2>
+		<input id="file" type="text" name="file" placeholder="{{file}}-{{name}}.html"/ required>
+		
+		<div>
+			<button id="go" type="submit">
+				Make the magic happen
+			</button>
+		</div>
+	</form>
+
+	<script>
+  		var js = CodeMirror.fromTextArea(document.getElementById("data"), {
+		    lineNumbers: true,
+		    //styleActiveLine: true,
+		    //matchBrackets: true,
+		    theme:'material'
+		});
+		var html = CodeMirror.fromTextArea(document.getElementById("html"), {
+		    lineNumbers: true,
+		    //styleActiveLine: true,
+		    //matchBrackets: true,
+		    theme:'material'
+		});
+	</script>
+
+</body>
+</html>
