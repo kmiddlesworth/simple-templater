@@ -1,0 +1,101 @@
+body {
+  font-size: 18px;
+  line-height: 1.44;
+  color: #444444; }
+
+.eyebrow {
+  font-family: OpenSans;
+  font-size: 16px;
+  color: #444444; }
+
+.title-1 {
+  font-family: OpenSans;
+  font-size: 36px;
+  line-height: 1.39;
+  letter-spacing: normal;
+  color: #444444; }
+
+.cta-link {
+  font-size: 18px;
+  line-height: 1.44;
+  color: #006392;
+  text-decoration: none; }
+
+.section {
+  max-width: 1420px;
+  margin: 40px auto; }
+
+@media (min-width: 768px) {
+  .split-wrap {
+    display: flex; } }
+
+.split {
+  flex: 0 1 50%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.img-wrap.split {
+  min-width: 320px; }
+  @media (min-width: 768px) {
+    .img-wrap.split {
+      min-width: 640px; } }
+
+.img-wrap img {
+  width: 100%;
+  object-fit: cover; }
+
+.content.split {
+  padding: 2em; }
+  @media (min-width: 768px) {
+    .content.split {
+      padding-top: 0; } }
+
+.menu {
+  text-decoration: none; }
+
+.content {
+  max-width: 550px; }
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("/fonts/proxima-nova/3A1E33_20_0.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("/fonts/proxima-nova/3A1E33_2E_0.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("/fonts/proxima-nova/3A1E33_24_0.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: url("/fonts/proxima-nova/3A1E33_B_0.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700; }
+
+body {
+  font-family: 'proxima-nova';
+  font-weight: 400;
+  font-style: normal; }
+  body i {
+    font-style: italic; }
+
+.eyebrow {
+  font-family: 'proxima-nova';
+  text-transform: uppercase;
+  font-weight: 600; }
+
+.title-1 {
+  font-family: 'proxima-nova';
+  font-weight: 700; }
+
+.cta-link {
+  font-family: 'proxima-nova'; }

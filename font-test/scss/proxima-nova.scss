@@ -1,0 +1,139 @@
+@import 'globals';
+
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_30_0.woff2') format('woff2');
+// 	font-style: normal;
+// 	font-weight: 100;
+// }
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_28_0.woff2') format('woff2');
+// 	font-style: italic;
+// 	font-weight: 100;
+// }
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_1E_0.woff2') format('woff2');
+// 	font-style: normal;
+// 	font-weight: 300;
+// }
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_14_0.woff2') format('woff2');
+// 	font-style: italic;
+// 	font-weight: 300;
+// }
+
+@font-face {
+	font-family: 'proxima-nova';
+	src: url('/fonts/proxima-nova/3A1E33_20_0.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'proxima-nova';
+	src: url('/fonts/proxima-nova/3A1E33_2E_0.woff2') format('woff2');
+	font-style: italic;
+	font-weight: 400;
+}
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_1C_0.woff2') format('woff2');
+// 	font-style: normal;
+// 	font-weight: 500;
+// }
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_16_0.woff2') format('woff2');
+// 	font-style: italic;
+// 	font-weight: 500;
+// }
+
+@font-face {
+	font-family: 'proxima-nova';
+	src: url('/fonts/proxima-nova/3A1E33_24_0.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 600;
+}
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_2B_0.woff2') format('woff2');
+// 	font-style: italic;
+// 	font-weight: 600;
+// }
+
+@font-face {
+	font-family: 'proxima-nova';
+	src: url('/fonts/proxima-nova/3A1E33_B_0.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 700;
+}
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_A_0.woff2') format('woff2');
+// 	font-style: italic;
+// 	font-weight: 700;
+// }
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_D_0.woff2') format('woff2');
+// 	font-style: normal;
+// 	font-weight: 800;
+// }
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_1D_0.woff2') format('woff2');
+// 	font-style: italic;
+// 	font-weight: 800;
+// }
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_2_0.woff2') format('woff2');
+// 	font-style: normal;
+// 	font-weight: 900;
+// }
+
+// @font-face {
+// 	font-family: 'proxima-nova';
+// 	src: url('/fonts/proxima-nova/3A1E33_E_0.woff2') format('woff2');
+// 	font-style: italic;
+// 	font-weight: 900;
+// }
+
+
+body {
+    font-family:'proxima-nova';
+    font-weight:400;
+    font-style: normal;
+    i {
+        font-style: italic;
+    }
+}
+
+.eyebrow {
+    font-family:'proxima-nova';
+    text-transform:uppercase;
+    font-weight:600;
+}
+
+.title-1 {
+    font-family:'proxima-nova';
+    font-weight:700;
+}
+
+.cta-link {
+    font-family:'proxima-nova';
+}

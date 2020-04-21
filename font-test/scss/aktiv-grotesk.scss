@@ -1,0 +1,36 @@
+@import 'globals';
+
+@font-face {
+	font-family: 'Aktiv Grotesk VF';
+	src: url('/fonts/aktiv-grotesk/AktivGroteskVF_Trial_WghtWdthItal.woff2') format('woff2');
+}
+
+
+body {
+    font-family: 'Aktiv Grotesk VF';
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+
+    i {
+        font-variation-settings: "wght" 300, "wdth" 100, "ital" .5;
+    }
+
+    strong {
+        font-variation-settings: "wght" 700, "wdth" 100, "ital" 0;
+    }
+}
+
+.eyebrow {
+    font-family: 'Aktiv Grotesk VF';
+    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    text-transform:uppercase;
+}
+
+.title-1 {
+    font-family: 'Aktiv Grotesk VF';
+    font-variation-settings: "wght" 800, "wdth" 100, "ital" 0;
+}
+
+.cta-link {
+    font-family: 'Aktiv Grotesk VF';
+    font-variation-settings: "wght" 500, "wdth" 100, "ital" 0;
+}

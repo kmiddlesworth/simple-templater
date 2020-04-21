@@ -5,7 +5,32 @@ const fs = require('fs');
 const shell = require('shelljs');
 const app = express();
 const basicAuth = require('express-basic-auth');
+var sass = require('node-sass');
 
+const varianList = [
+	{
+		slug:'aktiv-grotesk', 
+		name:'Aktive Grotesk',
+		stats:`Variable: Yes <br /> Font Files: 1 <br /> Total Font Weight: 173kb`
+	}, 
+	{
+		slug:'source-sans-pro', 
+		name:'Source Sans Pro',
+		stats:`Variable: No <br /> Font Files: 4 <br /> Total Font Weight: 54.5kb`
+	},
+	{
+		slug:'proxima-nova',
+		name:'Proxima Nova',
+		stats:`Variable: No <br /> Font Files: 4 <br /> Total Font Weight: 222.9kb`
+	},
+	{
+		slug:'manrope',
+		name:'Manrope',
+		stats:`Variable: Yes <br /> Font Files: 1 <br /> Total Font Weight: 23.1kb`
+	}
+];
+
+app.use(express.static('font-test/public'));
 
 app.use(bodyParser.json({limit: '50mb'}));       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -80,4 +105,43 @@ app.post('/', (req, res) => {
 
 });
 
-app.listen(process.env.PORT || 8085, () => console.log('Example app listening on port 8085!'))
+app.get('/font', (req, res) => {
+	let html = '';
+
+	varianList.forEach(item => {
+		html += `<p><a href="/font/${item.slug}">${item.name}</a></p>`;
+	})
+
+	res.send(html);
+
+});
+
+app.get('/font/:fontface', (req, res) => {
+	
+	const fontMatch = varianList.filter(item => item.slug === req.params.fontface)
+
+	if (!fontMatch.length) return res.send(':(');
+	
+	let html = fs.readFileSync('font-test/app.html', 'utf8');
+	
+	html = html.split('{{slug}}').join(fontMatch[0].slug);
+	html = html.split('{{name}}').join(fontMatch[0].name);
+	html = html.split('{{stats}}').join(fontMatch[0].stats);
+
+	res.send(html);
+});
+
+app.listen(process.env.PORT || 8085, () => {
+	console.log('Example app listening on port 8085!')
+	console.log('Compiling SASS');
+
+	varianList.forEach(item => {
+		sass.render({
+			file: `font-test/scss/${item.slug}.scss`
+		}, function(err, result) { 
+			if (err) return console.log(err);
+			fs.writeFileSync(`font-test/public/css/${item.slug}.css`, result.css);
+		});
+	});
+
+});

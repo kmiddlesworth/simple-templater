@@ -1,0 +1,34 @@
+@import 'globals';
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@393;400&display=swap');
+
+
+
+body {
+    font-family: 'Manrope';
+    font-variation-settings: "wght" 300, "wdth" 100, "ital" 0;
+
+    i {
+        font-variation-settings: "wght" 300, "wdth" 100, "ital" .5;
+    }
+
+    strong {
+        font-variation-settings: "wght" 700, "wdth" 100, "ital" 0;
+    }
+}
+
+.eyebrow {
+    font-family: 'Manrope';
+    font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+    text-transform:uppercase;
+}
+
+.title-1 {
+    font-family: 'Manrope';
+    font-variation-settings: "wght" 800, "wdth" 100, "ital" 0;
+}
+
+.cta-link {
+    font-family: 'Manrope';
+    font-variation-settings: "wght" 500, "wdth" 100, "ital" 0;
+}
