@@ -5,7 +5,9 @@ const fs = require('fs');
 const shell = require('shelljs');
 const app = express();
 const basicAuth = require('express-basic-auth');
+const request = require('request');
 var sass = require('node-sass');
+
 
 const varianList = [
 	{
@@ -53,7 +55,11 @@ app.get('/zip', (req, res) => {
 	res.sendFile(__dirname + '/files.zip');
 })
 
+
+
+
 app.get('/', (req, res) => res.sendFile(__dirname + '/app.html'));
+app.get('/gtm', (req, res) => res.sendFile(__dirname + '/gtm-test.html'));
 app.post('/', (req, res) => {
 
 	var dir = './tmp';

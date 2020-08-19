@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-TWLS8LR');</script>
+	<!-- End Google Tag Manager -->
+	
+	<title>The Template Amazement Machine!</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/codemirror.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/theme/material.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.26.0/codemirror.min.js"></script>
+	
+	<style>
+		
+		body {
+			margin:2em;
+			font-family: system-ui;
+			padding-bottom:20rem
+		}
+
+
+		input {
+			display:block;
+			border:none;
+			background:#263238;
+			border:#263238 1px solid;
+			color:rgba(233, 237, 237, 1);
+			max-width:400px;
+			cursor:pointer;
+			font-size: 1.2em;
+			padding:.5em 1em;
+			width: 100%;
+		}
+
+		button {	
+			display:block;
+			margin:2em auto;
+			border:none;
+			background:#263238;
+			border:#263238 1px solid;
+			color:rgba(233, 237, 237, 1);
+			max-width:400px;
+			cursor:pointer;
+			animation:pulse 5s infinite;
+			font-size: 2em;
+			padding:1em 2em;
+			z-index:1000;
+			border-radius:10px;
+		}
+		button:hover {
+			
+		}
+		
+		@keyframes pulse {
+		  	0%, 100% {
+		    	opacity:1;
+		  	}
+			
+			45% {
+				transform: rotate(0deg);
+			}
+
+			46% {
+				transform: rotate(-4deg);
+			}
+
+			48% {
+				transform: rotate(4deg);
+			}
+
+		  	50% {
+		    	opacity:.8;
+		    	transform: rotate(0deg)
+		  	}
+		}
+
+		.gtm-test {
+			margin:3rem;
+		}
+
+		.gtm-test-module {
+			padding:3rem;
+			border:4px solid blue;
+		}
+
+		.gtm-test-submodule {
+			padding:1rem;
+			border:4px solid #b89455ff;
+			margin:.5em;
+		}
+
+		.gtm-test-cta {
+			padding:.2rem;
+			border:4px solid #999999ff;
+		}
+
+		
+	</style>
+
+</head>
+<body>
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWLS8LR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	
+	<h1>GTM Data Hoisting Test</h1>
+	
+	<p>Test based on <a target="_blank" href="https://docs.google.com/presentation/d/1IDy3abTJMd9OetESsZ7DNUxiVMRdL5287z6woe9rHh4/edit#slide=id.g8be6bc74d3_4_82">this requirements slide</a>.</p>
+
+	<div class="gtm-test">
+		<div class="gtm-test-module" data-tag-trigger="visible" data-tag-meta='{"type":"module", "name":"Documentation", "title":"Documentation & Resources", "id": "Contextual Documentation", "no": "01"}'>
+			<div class="gtm-test-submodule" data-tag-meta='{"type":"document", "category":"Application Data Sheet", "label":"Overview Sheet", "product":"RCVcalc", "language":"English", "elementno":"01", "fieldname":"fieldNameThatIsUsed"}'>
+				<p><a class="gtm-test-cta" data-tag-trigger="click" href="#link" data-tag-meta='{"type":"cta", "category":"text-link", "label":"Preview"}'>Preview</a></p>
+				<p><a class="gtm-test-cta" data-tag-trigger="click" href="#link" data-tag-meta='{"type":"cta", "category":"text-link", "label":"Download"}'>Download</a></p>
+				<p><a class="gtm-test-cta" data-tag-trigger="click" href="#link" data-tag-meta='{"type":"cta", "category":"text-link", "label":"Email"}'>Email</a></p>
+				<p><a class="gtm-test-cta" data-tag-trigger="click" href="#link" data-tag-meta='{"type":"cta", "category":"text-link", "label":"Favorite"}'>Favorite</a></p>
+			</div>
+			<div class="gtm-test-submodule" data-tag-trigger="click" data-tag-meta='{"type":"document", "category":"Application Data Sheet", "label":"Software Manual", "product":"RCVcalc", "language":"English", "elementno":"02", "fieldname":"fieldNameThatIsUsed"}'>
+				<p><a class="gtm-test-cta" data-tag-trigger="click" href="#link" data-tag-meta='{"type":"cta", "category":"text-link", "label":"Preview"}'>Preview</a></p>
+				<p><a class="gtm-test-cta" data-tag-trigger="click" href="#link" data-tag-meta='{"type":"cta", "category":"text-link", "label":"Download"}'>Download</a></p>
+				<p><a class="gtm-test-cta" data-tag-trigger="click" href="#link" data-tag-meta='{"type":"cta", "category":"text-link", "label":"Email"}'>Email</a></p>
+				<p><a class="gtm-test-cta" data-tag-trigger="click" href="#link" data-tag-meta='{"type":"cta", "category":"text-link", "label":"Favorite"}'>Favorite</a></p>	
+			</div>
+		</div>
+	</div>
+</body>
+</html>
